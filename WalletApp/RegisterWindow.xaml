@@ -1,0 +1,101 @@
+﻿<Window x:Class="WalletApp.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WalletApp"
+        mc:Ignorable="d"
+        FontSize="14"
+
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        WindowStartupLocation="CenterScreen"
+        Title="Register" Height="589.263" Width="469">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <!-- Box Input -->
+
+            <Border HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="8"
+                    BorderThickness="1"
+                    BorderBrush="Black">
+                <Image Width="128"
+                   Height="128"
+                   HorizontalAlignment="Center"
+                   x:Name="userImage"
+                   Stretch="UniformToFill"/>
+            </Border>
+            <Button Content="Upload Image"
+                    Padding="6"
+                    Cursor="Hand"
+                    HorizontalAlignment="Center"                   
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    ToolTip="MaterialDesignOutlinedButton"
+                   
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"    
+                    Click="Button_Upload_Image"
+             />
+
+            <TextBox x:Name="emailBox"
+                     Width="250"
+                     materialDesign:HintAssist.Hint="Email"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     VerticalAlignment="Center">
+            </TextBox>
+
+            <TextBox x:Name="usernameBox"
+                     Width="250"
+                     materialDesign:HintAssist.Hint="Username"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     VerticalAlignment="Center">
+            </TextBox>
+
+            <PasswordBox x:Name="passwordBox"
+                     Width="250"
+                     materialDesign:HintAssist.Hint="Password"
+                     materialDesign:HintAssist.Foreground="Purple"
+                     materialDesign:TextFieldAssist.UnderlineBrush="Purple"
+                     Style="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+            </PasswordBox>
+
+            <TextBox x:Name="firstnameBox"
+                     Width="250"
+                     materialDesign:HintAssist.Hint="Firstname"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     VerticalAlignment="Center">
+            </TextBox>
+
+            <TextBox x:Name="lastnameBox"
+                     Width="250"
+                     materialDesign:HintAssist.Hint="Lastname"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     VerticalAlignment="Center">
+            </TextBox>
+            <!-- Box Input -->
+
+            <!-- Button Register -->
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0 20 0 0">
+                <Button Content="Register"
+                        Padding="6"
+                        Cursor="Hand"
+                        IsDefault="True"
+                        Width="150"
+                        Click="Button_New_Register"/>
+            </StackPanel>
+            <!-- Button Register -->
+
+        </StackPanel>
+    </Grid>
+</Window>

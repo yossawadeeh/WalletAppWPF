@@ -1,0 +1,42 @@
+﻿<Window x:Class="WalletApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WalletApp"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Closing="MainWindow_Closing"
+        WindowStartupLocation="CenterScreen"
+        Title="Main" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            
+            <Border BorderBrush="Black"
+                    BorderThickness="1"
+                    Margin="8"
+                    HorizontalAlignment="Center">
+            <Image Height="256"
+                   Width="256"
+                   Stretch="UniformToFill"
+                   x:Name="userImage"/>
+            </Border>
+
+            <TextBlock Text="(Uer Fullname)"
+                       HorizontalAlignment="Center"
+                       FontSize="24"
+                       x:Name="fullNameBox"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
